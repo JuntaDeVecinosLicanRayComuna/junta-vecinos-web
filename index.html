@@ -4,40 +4,22 @@
 <meta charset="UTF-8">
 <title>Junta de Vecinos Lican Ray</title>
 
+<!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
+/* GENERAL */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    background: black;
     color: white;
-    overflow-x: hidden;
-}
-
-/* VIDEO DE FONDO */
-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* CAPA OSCURA PARA LEER TEXTO */
-.overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: -1;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* NAV */
 nav {
-    background: rgba(0,0,0,0.7);
+    background: #111;
     padding: 15px;
     text-align: center;
 }
@@ -49,53 +31,79 @@ nav a {
     font-weight: 600;
 }
 
-/* CONTENEDOR GENERAL */
+nav a:hover {
+    color: #00ff88;
+}
+
+/* CONTENEDOR */
 .contenedor {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-/* TÍTULO */
+/* TITULO */
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 55px;
-    margin-bottom: 40px;
+    color: #00ff88;
+    margin-bottom: 50px;
 }
 
-/* SUBTÍTULOS */
+/* SUBTITULO */
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 60px;
 }
 
-/* BLOQUES DE TEXTO (recuadros separados) */
+/* BLOQUES */
 .bloque {
-    background: rgba(255,255,255,0.1);
-    padding: 30px;
-    margin-bottom: 40px; /* MÁS separación entre bloques */
+    background: rgba(255,255,255,0.05);
+    padding: 35px;
+    margin-bottom: 80px;
     border-radius: 15px;
-    backdrop-filter: blur(6px);
-    font-size: 21px;
-    line-height: 1.8; /* más espacio entre líneas */
-    max-width: 900px; /* evita que el texto sea demasiado largo */
+    font-size: 22px;
+    line-height: 1.8;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    /* ANIMACIÓN INICIAL */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 1s ease forwards;
+}
+
+/* RETARDO ENTRE BLOQUES */
+.bloque:nth-child(1) { animation-delay: 0.3s; }
+.bloque:nth-child(2) { animation-delay: 0.6s; }
+.bloque:nth-child(3) { animation-delay: 0.9s; }
+.bloque:nth-child(4) { animation-delay: 1.2s; }
+.bloque:nth-child(5) { animation-delay: 1.5s; }
+.bloque:nth-child(6) { animation-delay: 1.8s; }
+.bloque:nth-child(7) { animation-delay: 2.1s; }
+
+/* HOVER */
+.bloque:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* KEYFRAMES */
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 </style>
 </head>
 
 <body>
-
-<!-- VIDEO -->
-<video autoplay muted loop>
-    <source src="video.mp4" type="video/mp4">
-</video>
-
-<div class="overlay"></div>
 
 <nav>
     <a href="/">Inicio</a>
@@ -113,26 +121,34 @@ h2 {
 
     <h2>¿Quiénes somos?</h2>
 
-  <div class="bloque">
-Somos una junta de vecinos que a lo largo del tiempo, a desarrollado diversos proyectos enfocados en mejorar el entorno y la calidad de vida. Entre ellos destaca la entrega de 80 basureros a nuestros socios, iniciativa que busca fomentar la limpieza, el orden y el cuidado del espacio público, contribuyendo a mantener una comuna más limpia y agradable para residentes y visitantes.
-</div>
+    <div class="bloque">
+        Somos una junta de vecinos comprometida con el desarrollo integral y el bienestar de nuestra comunidad, trabajando de manera constante para mejorar la calidad de vida de todos nuestros socios y habitantes del sector. Nuestra labor se basa en la participación activa, la organización y el trabajo colaborativo entre vecinos.
+    </div>
 
-<div class="bloque">
-Además, trabajamos activamente en la protección de nuestras riquezas naturales, como el lago Calafquén y la península, promoviendo la conciencia ambiental y el uso responsable de nuestros recursos. Nuestro compromiso es preservar estos espacios para las futuras generaciones, entendiendo su importancia tanto ecológica como turística.
-</div>
+    <div class="bloque">
+        Contamos con más de 100 socios activos, lo que nos posiciona como una de las organizaciones comunitarias más representativas de Lican Ray. Este nivel de participación refleja la confianza de nuestros vecinos y fortalece nuestra capacidad de gestión.
+    </div>
 
-<div class="bloque">
-En el ámbito educativo, hemos impulsado iniciativas de apoyo a estudiantes destacados, realizando la entrega de 10 becas de $100.000 CLP a jóvenes de la comunidad. Con esto buscamos incentivar el esfuerzo académico y brindar oportunidades que contribuyan a su desarrollo personal y profesional.
-</div>
+    <div class="bloque">
+        Hemos desarrollado proyectos concretos como la entrega de 80 basureros, promoviendo la limpieza, el orden y el cuidado del entorno, contribuyendo a mantener una comuna más limpia y agradable.
+    </div>
 
-<div class="bloque">
-Actualmente nos encontramos avanzando en nuevos proyectos, como la adquisición de equipos para la medición del pH y la oxigenación del agua, lo que permitirá monitorear de mejor manera el estado de nuestros recursos hídricos y tomar decisiones informadas para su cuidado.
-</div>
+    <div class="bloque">
+        Además, trabajamos en la protección de nuestras riquezas naturales, como el lago Calafquén y la península, promoviendo la conciencia ambiental y el uso responsable de nuestros recursos.
+    </div>
 
-<div class="bloque">
-Seguimos trabajando con responsabilidad, transparencia y compromiso, promoviendo la participación activa de nuestros vecinos y fortaleciendo el sentido de comunidad. Nuestro objetivo es continuar creciendo como organización y generar un impacto positivo y duradero en Lican Ray.
-</div>
-    
+    <div class="bloque">
+        También impulsamos el desarrollo educativo mediante la entrega de becas a estudiantes destacados, apoyando su crecimiento académico y fomentando oportunidades para su futuro.
+    </div>
+
+    <div class="bloque">
+        Actualmente nos encontramos desarrollando nuevos proyectos, incluyendo la implementación de equipos para medir el pH y la oxigenación del agua, con el objetivo de cuidar nuestros recursos naturales.
+    </div>
+
+    <div class="bloque">
+        Seguimos trabajando con responsabilidad, transparencia y compromiso, fortaleciendo la participación vecinal y buscando nuevas oportunidades para el desarrollo de nuestra comunidad.
+    </div>
+
 </div>
 
 </body>
