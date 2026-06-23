@@ -8,40 +8,6 @@
 
 <style>
 
-  footer {
-    background: #000; /* negro sólido */
-    color: white;
-    width: 100%; /* asegura que ocupe todo el ancho */
-    padding: 50px 80px; /* más “grosor” al rectángulo */
-    box-sizing: border-box;
-}
-
-/* CADA FILA */
-.footer-linea {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-/* LINK */
-.footer-linea a {
-    color: #00aaff;
-    text-decoration: none;
-}
-
-.footer-linea a:hover {
-    text-decoration: underline;
-}
-
-/* TEXTO FINAL */
-.footer-abajo {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 12px;
-    color: #888;
-}
-/* GENERAL */
 body {
     margin: 0;
     background: white;
@@ -60,14 +26,9 @@ nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: 600;
 }
 
-nav a:hover {
-    color: #c0392b;
-}
-
-/* CONTENEDOR */
+/* CONTENIDO */
 .contenedor {
     max-width: 1400px;
     margin: auto;
@@ -75,118 +36,55 @@ nav a:hover {
     text-align: center;
 }
 
-/* TITULO (ROJO CARMESÍ OSCURO) */
+/* TITULO */
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 55px;
-    color: #7a1f1f; /* rojo carmesí con tono café */
-    margin-bottom: 60px;
-}
-
-/* SUBTITULO */
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 34px;
-    margin-bottom: 100px;
+    color: #7a1f1f;
 }
 
 /* BLOQUES */
 .bloque {
     background: #f5f5f5;
     padding: 35px;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
     border-radius: 15px;
     font-size: 22px;
     line-height: 1.8;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #ddd;
-
-    opacity: 0;
-    transform: translateY(40px);
-    animation: aparecer 1s ease forwards;
 }
 
-/* RETARDO ANIMACIÓN */
-.bloque:nth-child(1) { animation-delay: 0.3s; }
-.bloque:nth-child(2) { animation-delay: 0.6s; }
-.bloque:nth-child(3) { animation-delay: 0.9s; }
-.bloque:nth-child(4) { animation-delay: 1.2s; }
-.bloque:nth-child(5) { animation-delay: 1.5s; }
-.bloque:nth-child(6) { animation-delay: 1.8s; }
-.bloque:nth-child(7) { animation-delay: 2.1s; }
-
-/* HOVER */
-.bloque:hover {
-    transform: scale(1.02);
-    transition: 0.3s;
-}
-
-/* ANIMACIÓN */
-@keyframes aparecer {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-    footer {
+/* FOOTER (RECTÁNGULO NEGRO REAL) */
+footer {
     background: black;
     color: white;
-    padding: 40px 60px;
-    font-size: 16px; /* más chico */
+    width: 100%;
+    padding: 50px 80px;
+    box-sizing: border-box;
+    font-size: 15px;
 }
 
-/* CONTENIDO PRINCIPAL */
-.footer-contenido {
+/* FILAS */
+.footer-linea {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* COLUMNAS */
-.columna {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin-bottom: 15px;
 }
 
 /* LINK */
-.columna a {
+.footer-linea a {
     color: #00aaff;
     text-decoration: none;
-}
-
-.columna a:hover {
-    text-decoration: underline;
 }
 
 /* TEXTO FINAL */
 .footer-abajo {
     text-align: center;
     margin-top: 40px;
-    font-size: 13px; /* más pequeño */
-    color: #888; /* grisáceo */
-}
-    
-/* FOOTER */
-footer {
-    background: black;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.footer-linea {
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: auto;
-    flex-wrap: wrap;
+    font-size: 12px;
+    color: #888;
 }
 
 </style>
@@ -211,27 +109,29 @@ footer {
     <h2>¿Quiénes somos?</h2>
 
     <div class="bloque">
-        Somos una junta de vecinos comprometida con el desarrollo integral y el bienestar de nuestra comunidad, trabajando de manera constante para mejorar la calidad de vida de todos nuestros socios y habitantes del sector.
+        Somos una junta de vecinos comprometida con el desarrollo integral y el bienestar de nuestra comunidad.
     </div>
 
     <div class="bloque">
-        Contamos con más de 100 socios activos, lo que nos posiciona como una organización fuerte y representativa dentro de Lican Ray.
+        Contamos con más de 100 socios activos, siendo una organización representativa de Lican Ray.
     </div>
 
     <div class="bloque">
-        Hemos desarrollado proyectos como la entrega de 80 basureros, fomentando la limpieza y el cuidado del entorno, Además, protegemos nuestras riquezas naturales como el lago Calafquén y la península, promoviendo la conciencia ambiental.
+        Hemos desarrollado proyectos como la entrega de basureros y el cuidado del entorno natural.
     </div>
 
     <div class="bloque">
-        También impulsamos a las generaciónes futuras con proyectos en relación con la cultura, apoyo economico, de esta forma apoyando su desarrollo académico y futuro.
+        También apoyamos a las generaciones futuras mediante iniciativas culturales y educativas.
     </div>
 
     <div class="bloque">
-        Seguimos avanzando con compromiso, transparencia y participación comunitaria, con una directiva completamente a servicio de nuestros socios, ayudando en sus necesidades.
+        Seguimos avanzando con compromiso, transparencia y participación comunitaria.
     </div>
 
 </div>
 
+<!-- 🔥 FOOTER BIEN PUESTO -->
+<footer>
 
     <div class="footer-linea">
         <span>Junta de vecinos lican ray comuna 1997</span>
@@ -253,5 +153,6 @@ footer {
     </div>
 
 </footer>
+
 </body>
 </html>
