@@ -98,6 +98,46 @@ h2 {
     }
 }
 
+    footer {
+    background: black;
+    color: white;
+    padding: 40px 60px;
+    font-size: 16px; /* más chico */
+}
+
+/* CONTENIDO PRINCIPAL */
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* COLUMNAS */
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* LINK */
+.columna a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.columna a:hover {
+    text-decoration: underline;
+}
+
+/* TEXTO FINAL */
+.footer-abajo {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px; /* más pequeño */
+    color: #888; /* grisáceo */
+}
+    
 /* FOOTER */
 footer {
     background: black;
@@ -160,18 +200,26 @@ footer {
 </div>
 
 <footer>
+    <div class="footer-contenido">
 
-    <div>Junta de vecinos lican ray comuna 1997</div>
+        <div class="columna izquierda">
+            <div>Junta de vecinos lican ray comuna 1997</div>
+            <div>cacique millañanco 315</div>
+            <div>+56 9 9226 3238</div>
+        </div>
 
-    <div class="footer-linea">
-        <span>cacique millañanco 315</span>
-        <span>74.527.700-4</span>
+        <div class="columna derecha">
+            <div>74.527.700-4</div>
+            <div>Contacto: junta2023vecinos.licanraycomuna@gmail.com</div>
+            <div><a href="/Productos/">Certificado de residencia</a></div>
+        </div>
+
     </div>
 
-    <div>+56 9 9226 3238</div>
-    <div>Contacto: junta2023vecinos.licanraycomuna@gmail.com</div>
+    <div class="footer-abajo">
+        © 2026 Junta de Vecinos Lican Ray Comuna 1997 — Ley N° 19.418. Todos los derechos reservados.
+    </div>
 
 </footer>
-
 </body>
 </html>
