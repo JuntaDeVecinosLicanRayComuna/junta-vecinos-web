@@ -62,7 +62,7 @@ h2 {
 .bloque {
     background: rgba(255,255,255,0.05);
     padding: 35px;
-    margin-bottom: 80px;
+    margin-bottom: 140px; /* MUCHO más espacio */
     border-radius: 15px;
     font-size: 22px;
     line-height: 1.8;
@@ -71,12 +71,10 @@ h2 {
     margin-right: auto;
     border: 1px solid rgba(255,255,255,0.1);
 
-    /* ANIMACIÓN INICIAL */
     opacity: 0;
     transform: translateY(40px);
     animation: aparecer 1s ease forwards;
 }
-
 /* RETARDO ENTRE BLOQUES */
 .bloque:nth-child(1) { animation-delay: 0.3s; }
 .bloque:nth-child(2) { animation-delay: 0.6s; }
