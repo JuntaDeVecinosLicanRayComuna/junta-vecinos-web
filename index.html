@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Junta de Vecinos Lican Ray</title>
 
-<!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
 <style>
@@ -12,8 +11,8 @@
 /* GENERAL */
 body {
     margin: 0;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -32,7 +31,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #00ff88;
+    color: #c0392b;
 }
 
 /* CONTENEDOR */
@@ -43,12 +42,12 @@ nav a:hover {
     text-align: center;
 }
 
-/* TITULO */
+/* TITULO (ROJO CARMESÍ OSCURO) */
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 55px;
-    color: #00ff88;
-    margin-bottom: 50px;
+    color: #7a1f1f; /* rojo carmesí con tono café */
+    margin-bottom: 60px;
 }
 
 /* SUBTITULO */
@@ -60,22 +59,23 @@ h2 {
 
 /* BLOQUES */
 .bloque {
-    background: rgba(255,255,255,0.05);
+    background: #f5f5f5;
     padding: 35px;
-    margin-bottom: 200px; /* MUCHO más espacio */
+    margin-bottom: 150px;
     border-radius: 15px;
     font-size: 22px;
     line-height: 1.8;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid #ddd;
 
     opacity: 0;
     transform: translateY(40px);
     animation: aparecer 1s ease forwards;
 }
-/* RETARDO ENTRE BLOQUES */
+
+/* RETARDO ANIMACIÓN */
 .bloque:nth-child(1) { animation-delay: 0.3s; }
 .bloque:nth-child(2) { animation-delay: 0.6s; }
 .bloque:nth-child(3) { animation-delay: 0.9s; }
@@ -90,12 +90,30 @@ h2 {
     transition: 0.3s;
 }
 
-/* KEYFRAMES */
+/* ANIMACIÓN */
 @keyframes aparecer {
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.footer-linea {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 </style>
@@ -120,34 +138,48 @@ h2 {
     <h2>¿Quiénes somos?</h2>
 
     <div class="bloque">
-        Somos una junta de vecinos comprometida con el desarrollo integral y el bienestar de nuestra comunidad, trabajando de manera constante para mejorar la calidad de vida de todos nuestros socios y habitantes del sector. Nuestra labor se basa en la participación activa, la organización y el trabajo colaborativo entre vecinos.
+        Somos una junta de vecinos comprometida con el desarrollo integral y el bienestar de nuestra comunidad, trabajando de manera constante para mejorar la calidad de vida de todos nuestros socios y habitantes del sector.
     </div>
 
     <div class="bloque">
-        Contamos con más de 100 socios activos, lo que nos posiciona como una de las organizaciones comunitarias más representativas de Lican Ray. Este nivel de participación refleja la confianza de nuestros vecinos y fortalece nuestra capacidad de gestión.
+        Contamos con más de 100 socios activos, lo que nos posiciona como una organización fuerte y representativa dentro de Lican Ray.
     </div>
 
     <div class="bloque">
-        Hemos desarrollado proyectos concretos como la entrega de 80 basureros, promoviendo la limpieza, el orden y el cuidado del entorno, contribuyendo a mantener una comuna más limpia y agradable.
+        Hemos desarrollado proyectos como la entrega de 80 basureros, fomentando la limpieza y el cuidado del entorno.
     </div>
 
     <div class="bloque">
-        Además, trabajamos en la protección de nuestras riquezas naturales, como el lago Calafquén y la península, promoviendo la conciencia ambiental y el uso responsable de nuestros recursos.
+        Además, protegemos nuestras riquezas naturales como el lago Calafquén y la península, promoviendo la conciencia ambiental.
     </div>
 
     <div class="bloque">
-        También impulsamos el desarrollo educativo mediante la entrega de becas a estudiantes destacados, apoyando su crecimiento académico y fomentando oportunidades para su futuro.
+        También impulsamos becas para estudiantes destacados, apoyando su desarrollo académico y futuro.
     </div>
 
     <div class="bloque">
-        Actualmente nos encontramos desarrollando nuevos proyectos, incluyendo la implementación de equipos para medir el pH y la oxigenación del agua, con el objetivo de cuidar nuestros recursos naturales.
+        Actualmente trabajamos en proyectos como la medición del pH y oxigenación del agua.
     </div>
 
     <div class="bloque">
-        Seguimos trabajando con responsabilidad, transparencia y compromiso, fortaleciendo la participación vecinal y buscando nuevas oportunidades para el desarrollo de nuestra comunidad.
+        Seguimos avanzando con compromiso, transparencia y participación comunitaria.
     </div>
 
 </div>
+
+<footer>
+
+    <div>Junta de vecinos lican ray comuna 1997</div>
+
+    <div class="footer-linea">
+        <span>cacique millañanco 315</span>
+        <span>74.527.700-4</span>
+    </div>
+
+    <div>+56 9 9226 3238</div>
+    <div>Contacto: junta2023vecinos.licanraycomuna@gmail.com</div>
+
+</footer>
 
 </body>
 </html>
