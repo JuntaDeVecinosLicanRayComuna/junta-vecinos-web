@@ -8,62 +8,6 @@
 
 <style>
 
-    /* ANIMACIONES */
-/* BLOQUES */
-.bloque {
-    background: #f5f5f5;
-    padding: 35px;
-    margin-bottom: 150px;
-    border-radius: 15px;
-    font-size: 22px;
-    line-height: 1.8;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #ddd;
-
-    /* estado inicial oculto */
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
-}
-
-/* cuando aparece */
-.bloque.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* delays (uno tras otro) */
-.bloque:nth-of-type(1) { animation-delay: 0.2s; }
-.bloque:nth-of-type(2) { animation-delay: 0.4s; }
-.bloque:nth-of-type(3) { animation-delay: 0.6s; }
-.bloque:nth-of-type(4) { animation-delay: 0.8s; }
-.bloque:nth-of-type(5) { animation-delay: 1s; }
-
-/* keyframes */
-@keyframes aparecer {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-    <script>
-const bloques = document.querySelectorAll('.bloque');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, {
-    threshold: 0.2
-});
-
-bloques.forEach(bloque => {
-    observer.observe(bloque);
-});
-</script>
 /* GENERAL */
 body {
     margin: 0;
@@ -112,7 +56,7 @@ h2 {
     margin-bottom: 100px;
 }
 
-/* BLOQUES */
+/* BLOQUES (CON ANIMACIÓN SCROLL REAL) */
 .bloque {
     background: #f5f5f5;
     padding: 35px;
@@ -124,6 +68,20 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ddd;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.bloque.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* EFECTO HOVER PRO */
+.bloque:hover {
+    transform: scale(1.02);
 }
 
 /* FOOTER */
@@ -136,7 +94,7 @@ footer {
     font-size: 15px;
 }
 
-/* FILAS DEL FOOTER */
+/* FILAS */
 .footer-linea {
     display: flex;
     justify-content: space-between;
@@ -153,7 +111,7 @@ footer {
     text-decoration: underline;
 }
 
-/* LINEA BLANCA */
+/* LINEA */
 .linea-footer {
     width: 100%;
     height: 1px;
@@ -162,7 +120,7 @@ footer {
     opacity: 0.3;
 }
 
-/* TEXTO FINAL */
+/* COPYRIGHT */
 .footer-abajo {
     text-align: center;
     margin-top: 40px;
@@ -230,7 +188,6 @@ footer {
         <span><a href="/Productos/">Certificado de residencia</a></span>
     </div>
 
-    <!-- 🔥 AHORA AQUÍ -->
     <div class="linea-footer"></div>
 
     <div class="footer-abajo">
@@ -238,6 +195,23 @@ footer {
     </div>
 
 </footer>
+
+<!-- SCRIPT CORRECTO -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const bloques = document.querySelectorAll('.bloque');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    bloques.forEach(bloque => observer.observe(bloque));
+});
+</script>
 
 </body>
 </html>
