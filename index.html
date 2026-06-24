@@ -8,6 +8,62 @@
 
 <style>
 
+    /* ANIMACIONES */
+/* BLOQUES */
+.bloque {
+    background: #f5f5f5;
+    padding: 35px;
+    margin-bottom: 150px;
+    border-radius: 15px;
+    font-size: 22px;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+
+    /* estado inicial oculto */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+/* cuando aparece */
+.bloque.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* delays (uno tras otro) */
+.bloque:nth-of-type(1) { animation-delay: 0.2s; }
+.bloque:nth-of-type(2) { animation-delay: 0.4s; }
+.bloque:nth-of-type(3) { animation-delay: 0.6s; }
+.bloque:nth-of-type(4) { animation-delay: 0.8s; }
+.bloque:nth-of-type(5) { animation-delay: 1s; }
+
+/* keyframes */
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    <script>
+const bloques = document.querySelectorAll('.bloque');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+bloques.forEach(bloque => {
+    observer.observe(bloque);
+});
+</script>
 /* GENERAL */
 body {
     margin: 0;
@@ -169,12 +225,13 @@ footer {
         <span>Contacto: junta2023vecinos.licanraycomuna@gmail.com</span>
     </div>
 
-    <div class="linea-footer"></div>
-
     <div class="footer-linea">
         <span>+56 9 9226 3238</span>
         <span><a href="/Productos/">Certificado de residencia</a></span>
     </div>
+
+    <!-- 🔥 AHORA AQUÍ -->
+    <div class="linea-footer"></div>
 
     <div class="footer-abajo">
         © 2026 Junta de Vecinos Lican Ray Comuna 1997 — Ley N° 19.418. Todos los derechos reservados.
