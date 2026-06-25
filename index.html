@@ -8,6 +8,30 @@
 
 <style>
 
+    body {
+    margin: 15px;
+    border: 3px solid #7a1f1f;
+    box-sizing: border-box;
+    min-height: calc(100vh - 30px);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #c7b27a;
+    pointer-events: none;
+}
+    nav {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+}
+    .bloque {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+    
 /* GENERAL */
 body {
     margin: 0;
